@@ -1,6 +1,9 @@
 body {font-family: sans-serif; margin: 0;}
 h1 {font-size: 5rem; margin: 0.5em;}
-p {font-size: 1rem;}
+h2 {font-size: 2em;}
+h3 {font-size: 1.6rem; margin-bottom: 0;}
+p {font-size: 1.5rem;}
+a {font-size: 1.5rem;}
 
 header {
     background-image: url(img/cover-img.jpg);
@@ -36,7 +39,6 @@ nav li {
 }
 nav a {
     color: white;
-    font-size: 14px;
 }
 
 button {
@@ -45,17 +47,77 @@ button {
     padding: 1em 2em;
     color: white;
     border-radius: 2px;
-    font-size: 1em;
+    font-size: 1rem;
     text-transform: uppercase
 }
 
 section {
-    padding: 5vw 10vw;
+    padding: 2vw 10vw ;
 }
 
 #about {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
-/* f09b github icon
-f0e1 linkedin icon */
+
+#about img {
+    padding: 2em;
+    max-height: 30vw;
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#about li {
+    color: #357376;
+    display: inline-block;
+    padding: 1em 1em 1em 0;
+}
+#about li > p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#work {
+    background-color: #f8f8f845;
+}
+
+.fab {font-size: 3rem; padding-right: 20px;} 
+
+.grid {
+    color: #444;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+  }
+  
+  .grid:nth-child(1) {
+    grid-row-end: span 2;
+  }
+  
+  .grid:nth-child(odd) {
+    grid-column-end: span 2;
+  }
+
+  .project {background-color: teal;}
+
+  .project p {
+      padding: 1em;
+      display: inline-block;
+  }
+  
+  .project div {
+    text-align: right;
+    padding: 1em;
+  }
+
+  #contact {
+      background-color: black;
+  }
+
+  #contact a, #contact h2 {color: white;}
