@@ -1,6 +1,6 @@
 body {font-family: sans-serif; margin: 0;}
 h1 {font-size: 5rem; margin: 0.5em;}
-h2 {font-size: 2em;}
+h2 {font-size: 2rem;}
 h3 {font-size: 1.6rem; margin-bottom: 0;}
 p {font-size: 1.5rem;}
 a {font-size: 1.5rem;}
@@ -8,38 +8,40 @@ a {font-size: 1.5rem;}
 header {
     background-image: url(img/cover-img.jpg);
     background-position: center;
-}
+    }
 header h1, header p {color: white;}
 
 header > div {
     text-align: center;
-   padding: 10vw;
-}
+    padding: 10vw;
+    }
+
+#mobileNav {display: none;}
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-}
+    }
 nav p {
     color: white;
-}
+    }
 nav div {
     display: inline-block;
-}
+    }
 nav ul {
     margin: 0;
     list-style: none;
     display: flex;
     justify-content: space-between;
-  }
+    }
 nav li {
     padding-right: 4em;
-}
+    }
 nav a {
     color: white;
-}
+    }
 
 button {
     background-color: #333;
@@ -49,41 +51,41 @@ button {
     border-radius: 2px;
     font-size: 1rem;
     text-transform: uppercase
-}
+    }
 
 section {
     padding: 2vw 10vw ;
-}
+    }
 
 #about {
     display: grid;
     grid-template-columns: 2fr 1fr;
-}
+    }
 
 #about img {
     padding: 2em;
     max-height: 30vw;
-}
+    }
 
 #about ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
+    }
 
 #about li {
     color: #357376;
     display: inline-block;
     padding: 1em 1em 1em 0;
-}
+    }
 #about li > p {
     margin: 0;
     font-size: 1.4rem;
-}
+    }
 
 #work {
     background-color: #f8f8f845;
-}
+    }
 
 .fab {font-size: 3rem; padding-right: 20px;} 
 
@@ -93,31 +95,93 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(200px, auto);
     grid-gap: 20px;
-    grid-auto-flow: dense;
-  }
-  
-  .grid:nth-child(1) {
-    grid-row-end: span 2;
-  }
-  
-  .grid:nth-child(odd) {
-    grid-column-end: span 2;
-  }
+    }
 
-  .project {background-color: teal;}
+.project {background-color: teal;}
 
-  .project p {
-      padding: 1em;
-      display: inline-block;
-  }
-  
-  .project div {
+.project p {
+    padding: 1em;
+    display: inline-block;
+}
+
+.project div {
     text-align: right;
     padding: 1em;
-  }
+    }
 
-  #contact {
-      background-color: black;
-  }
+#contact {
+    background-color: black;
+}
 
-  #contact a, #contact h2 {color: white;}
+#contact a, #contact h2 {color: white;}
+
+.hamburger {
+    position: relative;
+    display: inline-block;
+    }
+
+.hamburger-content {
+    width: 100%;
+    display: none;
+    position: absolute;
+    left:0;
+    z-index:1;
+    }
+
+.hamburger-content a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.hamburger:hover .hamburger-content {
+    display: block;
+    background-color: black;
+    width: 100vw;
+    }
+
+.hamburger span {
+    font-size: 2.5rem;
+    color: white;
+    transition: transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    display: block;
+    transform: rotate(90deg);
+    }
+
+.hamburger:hover span {
+    transition: transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    display: inline-block;
+    transform: rotate(180deg);
+    }
+
+/* for screen less than 460px */
+@media all and (max-width: 460px) {
+    #desktopNav {display: none;}
+    #mobileNav {display: block;}
+    h1 {margin: 0;}
+    section { padding: 10px;}
+    header > div {
+        text-align: center;
+        padding: 5px;
+    }
+    #about {
+        grid-template-columns: 1fr;
+    }
+    #about img {
+        padding: 0;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .project div {
+        text-align: center;
+    }
+    .project button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    html {font-size: smaller;}
+        
+    }
