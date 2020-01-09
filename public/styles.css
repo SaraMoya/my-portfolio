@@ -1,0 +1,35 @@
+body {font-family: sans-serif; margin: 0;}
+header {
+    background-image: url(img/cover-img.jpg);
+    background-position: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: black;
+}
+nav p {
+    color: white;
+    font-size: 14px;
+}
+nav div {
+    display: inline-block;
+}
+nav ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+nav li {
+    padding-right: 4em;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+}
+/* f09b github icon
+f0e1 linkedin icon */
